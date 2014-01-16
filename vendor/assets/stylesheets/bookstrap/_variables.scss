@@ -1,0 +1,138 @@
+//== Typography
+//
+//## Veriables for Compass Vertical Rhythm
+
+$base-font-size: 14px;
+$base-line-height: 24px; // default 20px is too narrow for Japanese line composition with ruby annotations
+$round-to-nearest-half-line: true;
+
+//
+//## Font, line-height, and color for body text, headings, and more.
+
+$font-family-sans-serif:  sans-serif;
+$font-family-serif:       serif;
+$font-family-monospace:   monospace;
+$font-family-base:        $font-family-sans-serif;
+
+$font-size-base:          $base-font-size;
+//** Unit-less `line-height` for use in components like buttons.
+$line-height-base:        em($base-line-height); // 24/14
+
+$headings-font-family:    $font-family-sans-serif;
+$headings-font-weight:    bold; // Most of Japanese fonts do not support number font-weight
+$headings-line-height:    1.2; // Minimum line-height which Kinlde allows
+$headings-color:          inherit;
+
+//-- Iconography
+//
+//## Specify custom locations of the include Glyphicons icon font. Useful for those including Bootstrap via Bower.
+
+$icon-font-path: "bookstrap/";
+$icon-font-name: "glyphicons-halflings-regular";
+$icon-font-svg-id: "glyphicons_halflingsregular";
+
+//== Jumbotron
+//
+//##
+
+$jumbotron-padding:              $base-line-height;
+$jumbotron-color:                inherit;
+$jumbotron-bg:                   $gray-lighter;
+$jumbotron-heading-color:        inherit;
+$jumbotron-font-size:            15px;
+
+//== Tables
+$table-font-size: 13px;
+
+
+// ----- Temp (not supported in v 3.0.3.0)--------------
+
+//== Panels
+//
+//##
+
+$panel-bg:                    #fff !default;
+$panel-body-padding:          15px !default;
+$panel-border-radius:         $border-radius-base !default;
+
+//** Border color for elements within panels
+$panel-inner-border:          #ddd !default;
+$panel-footer-bg:             #f5f5f5 !default;
+
+$panel-default-text:          $gray-dark !default;
+$panel-default-border:        #ddd !default;
+$panel-default-heading-bg:    #f5f5f5 !default;
+
+$panel-primary-text:          #fff !default;
+$panel-primary-border:        $brand-primary !default;
+$panel-primary-heading-bg:    $brand-primary !default;
+
+$panel-success-text:          $state-success-text !default;
+$panel-success-border:        $state-success-border !default;
+$panel-success-heading-bg:    $state-success-bg !default;
+
+$panel-info-text:             $state-info-text !default;
+$panel-info-border:           $state-info-border !default;
+$panel-info-heading-bg:       $state-info-bg !default;
+
+$panel-warning-text:          $state-warning-text !default;
+$panel-warning-border:        $state-warning-border !default;
+$panel-warning-heading-bg:    $state-warning-bg !default;
+
+$panel-danger-text:           $state-danger-text !default;
+$panel-danger-border:         $state-danger-border !default;
+$panel-danger-heading-bg:     $state-danger-bg !default;
+
+//== Wells
+//
+//##
+
+$well-bg:                     #f5f5f5 !default;
+$well-border:                 darken($well-bg, 7%) !default;
+
+
+//== List group
+//
+//##
+
+//** Background color on `.list-group-item`
+$list-group-bg:                 #fff !default;
+//** `.list-group-item` border color
+$list-group-border:             #ddd !default;
+//** List group border radius
+$list-group-border-radius:      $border-radius-base !default;
+
+//** Background color of single list elements on hover
+$list-group-hover-bg:           #f5f5f5 !default;
+//** Text color of active list elements
+$list-group-active-color:       $component-active-color !default;
+//** Background color of active list elements
+$list-group-active-bg:          $component-active-bg !default;
+//** Border color of active list elements
+$list-group-active-border:      $list-group-active-bg !default;
+$list-group-active-text-color:  lighten($list-group-active-bg, 40%) !default;
+
+$list-group-link-color:         #555 !default;
+$list-group-link-heading-color: #333 !default;
+
+//== Breadcrumbs
+//
+//##
+
+$breadcrumb-padding-vertical:   8px !default;
+$breadcrumb-padding-horizontal: 15px !default;
+//** Breadcrumb background color
+$breadcrumb-bg:                 #f5f5f5 !default;
+//** Breadcrumb text color
+$breadcrumb-color:              #ccc !default;
+//** Text color of current page in the breadcrumb
+$breadcrumb-active-color:       $gray-light !default;
+//** Textual separator for between breadcrumb elements
+$breadcrumb-separator:          "/" !default;
+
+//== Code
+//
+//##
+
+$kbd-color:                   #fff !default; //
+$kbd-bg:                      #333 !default;

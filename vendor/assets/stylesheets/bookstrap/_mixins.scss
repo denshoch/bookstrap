@@ -1,0 +1,39 @@
+// Button sizes (Override Bootstrap mixin)
+// -------------------------
+@mixin button-size($padding-vertical, $padding-horizontal, $font-size, $line-height, $border-radius) {
+  padding: $padding-vertical $padding-horizontal;
+  font-size: em($font-size); // use relative unit
+  line-height: $line-height;
+  border-radius: $border-radius;
+}
+
+
+// List Groups (not supported in v3.0.3.0)
+// -------------------------
+@mixin list-group-item-variant($state, $background, $color) {
+  .list-group-item-#{$state} {
+    color: $color;
+    background-color: $background;
+
+    // [converter] extracted a& to a.list-group-item-#{$state}
+  }
+
+  a.list-group-item-#{$state} {
+    color: $color;
+
+    .list-group-item-heading { color: inherit; }
+
+    &:hover,
+    &:focus {
+      color: $color;
+      background-color: darken($background, 5%);
+    }
+    &.active,
+    &.active:hover,
+    &.active:focus {
+      color: #fff;
+      background-color: $color;
+      border-color: $color;
+    }
+  }
+}

@@ -1,0 +1,24 @@
+*.gem
+*.rbc
+.sass-cache
+.bundle
+.config
+.yardoc
+.DS_Store
+Gemfile.lock
+InstalledFiles
+_yardoc
+coverage
+doc/
+lib/bundler/man
+pkg
+rdoc
+spec/reports
+test/tmp
+test/version_tmp
+tmp
+
+# Ignore bundler config
+/.bundle
+/vendor/cache
+/vendor/bundle
