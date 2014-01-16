@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = Bookstrap::VERSION
   spec.authors       = ["lostandfound"]
   spec.email         = ["itshustletime@gmail.com"]
-  spec.description   = "Bookstrap for ebook"
-  spec.summary       = "Bookstrap for ebook"
+  spec.description   = "Bookstrap is a custom Bootstrap theme for reflowable and static eBook (such as EPUB)."
+  spec.summary       = "Bootstrap for ebook"
   spec.homepage      = ""
   spec.license       = "MIT"
 
