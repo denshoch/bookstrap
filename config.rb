@@ -2,7 +2,7 @@
 require 'bookstrap'
 # Set this to the root of your project when deployed:
 http_path = "/"
-css_dir = "./"
+css_dir = "build/stylesheets"
 sass_dir = "vendor/assets/stylesheets"
 images_dir = "vendor/assets/images"
 javascripts_dir = "vendor/assets/javascripts"
