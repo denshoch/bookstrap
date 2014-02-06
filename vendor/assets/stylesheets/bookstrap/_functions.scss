@@ -8,3 +8,14 @@
    @if $target == 0 { @return 0 }
    @return $target / $context + 0em;
 }
+
+// Rem font unit
+@function rem($target) {
+   @if $target == 0 { @return 0 }
+   @return $target / $base-font-size + 0em;
+}
+
+// Get px from line-height
+@function contained-font-size($line-height-em, $line-number: 1) {
+	@return ($base-line-height * $line-number / $line-height-em);
+}

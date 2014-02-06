@@ -22,5 +22,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rake"
   spec.add_runtime_dependency 'sass', '~> 3.2'
   spec.add_development_dependency 'compass'
-  spec.add_development_dependency 'bootstrap-sass', "~> 3.0.3.0"
+  spec.add_development_dependency 'bootstrap-sass', "~> 3.1.0.2"
 end

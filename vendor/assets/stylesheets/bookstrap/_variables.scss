@@ -1,97 +1,294 @@
-//== Typography
+// bootstrap-sass 3.0.3.0 からの流用
 //
-//## Veriables for Compass Vertical Rhythm
+// 変数
+// --------------------------------------------------
+// 
+// * 色
+// * ベース
+// * タイポグラフィー
+// * コンポーネント
+// * 表
+// * ボタン
+// * メディアクエリ
+// * 状態と警告
+// * ラベル
+// * 注意書き
+// * リストグループ
+// * パネル
+// * 囲み
+// * サムネイル
+// * パンくず
+// * コード
+// * テキスト
+// * その他
 
-$base-font-size: 14px;
-$base-line-height: 24px; // default 20px is too narrow for Japanese line composition with ruby annotations
+
+//== 色
+//
+//## グレーとブランドカラー
+
+$gray-darker: lighten(#000, 13.5%) !default; // #222
+$gray-dark: lighten(#000, 20%) !default;   // #333
+$gray: lighten(#000, 33.5%) !default; // #555
+$gray-light: lighten(#000, 60%) !default;   // #999
+$gray-lighter: lighten(#000, 93.5%) !default; // #eee
+
+$brand-primary:         #428bca !default;
+//$brand-primary: #FF6699 !default;; // pink
+//$brand-primary: darken(#FF8800, 2%) !default;; // orange
+//$brand-primary: darken(#9ACD32, 7%) !default;; // yellow green
+
+$brand-success:         #5cb85c !default; // 成功
+$brand-info:            #5bc0de !default; // 情報
+$brand-warning:         #f0ad4e !default; // 警告
+$brand-danger:          #d9534f !default; // 危険
+
+
+//== ベース
+//
+//## 
+// ** bodyの背景色
+$body-bg: #fff !default;
+// ** テキストの色
+$text-color: #333!default;
+
+//** リンク色
+$link-color:            $brand-primary !default;
+//** ホバー時のリンク色
+$link-hover-color:      darken($link-color, 15%) !default;
+
+
+//== タイポグラフィー
+//
+//## フォントやline-heightを決めます
+
+// ** Compass Vertical Rhythmで使う変数です。http://compass-style.org/reference/compass/typography/vertical_rhythm/
+$base-font-size: 16px !default;
+$base-line-height: 28p !default; // = 1.75em。日本語のルビを含むので広めにとっています
 $round-to-nearest-half-line: true;
+$relative-font-sizing: true;
 
+// ** 具体的なフォントの指定を避けています
+$font-family-sans-serif:  sans-serif !default;
+$font-family-serif:       serif !default;
+$font-family-monospace:   monospace !default;
+$font-family-base:        $font-family-sans-serif !default;
+$font-family-alt:         $font-family-serif !default;
+
+$font-size-base:          $base-font-size !default; // 使わない
+$font-size-large:         ceil(($font-size-base * 1.25)) !default; // ~18px 使わない
+$font-size-small:         ceil(($font-size-base * 0.85)) !default; // ~12px 使わない
+
+$font-size-h1:            floor(($font-size-base * 2.6)) !default; // ~36px 使わない
+$font-size-h2:            floor(($font-size-base * 2.15)) !default; // ~30px 使わない
+$font-size-h3:            ceil(($font-size-base * 1.7)) !default; // ~24px 使わない
+$font-size-h4:            ceil(($font-size-base * 1.25)) !default; // ~18px 使わない
+$font-size-h5:            $font-size-base !default; //使わない
+$font-size-h6:            ceil(($font-size-base * 0.85)) !default; // ~12px 使わない
+
+// ** 見出し
+$headings-font-family:    $font-family-sans-serif !default;
+$headings-font-weight:    bold !default;
+$headings-line-height:    1.2  !default;
+$headings-color:          $brand-primary !default;
+
+
+//== コンポーネント
 //
-//## Font, line-height, and color for body text, headings, and more.
+//## Define common padding and border radius sizes and more. Values based on 14px text and 1.428 line-height (~20px to start).
+//  いるかこれ？
 
-$font-family-sans-serif:  sans-serif;
-$font-family-serif:       serif;
-$font-family-monospace:   monospace;
-$font-family-base:        $font-family-sans-serif;
+$padding-base-vertical:     6px !default;
+$padding-base-horizontal:   12px !default;
 
-$font-size-base:          $base-font-size;
-//** Unit-less `line-height` for use in components like buttons.
-$line-height-base:        em($base-line-height); // 24/14
+$padding-large-vertical:    10px !default;
+$padding-large-horizontal:  16px !default;
 
-$headings-font-family:    $font-family-sans-serif;
-$headings-font-weight:    bold; // Most of Japanese fonts do not support number font-weight
-$headings-line-height:    1.2; // Minimum line-height which Kinlde allows
-$headings-color:          inherit;
+$padding-small-vertical:    5px !default;
+$padding-small-horizontal:  10px !default;
 
-//-- Iconography
+$padding-xs-vertical:       1px !default;
+$padding-xs-horizontal:     5px !default;
+
+$line-height-large:         1.33 !default;
+$line-height-small:         1.5 !default;
+
+$border-radius-base:        4px !default;
+$border-radius-large:       6px !default;
+$border-radius-small:       3px !default;
+
+
+//** Global color for active items (e.g., navs or dropdowns).
+$component-active-color:    #fff !default;
+//** Global background color for active items (e.g., navs or dropdowns).
+$component-active-bg:       $brand-primary !default;
+
+//** Width of the `border` for generating carets that indicator dropdowns.
+$caret-width-base:          4px !default;
+//** Carets increase slightly in size for larger components.
+$caret-width-large:         5px !default;
+
+//== 表
 //
-//## Specify custom locations of the include Glyphicons icon font. Useful for those including Bootstrap via Bower.
+//## Customizes the `.table` component with basic values, each used across all table variations.
 
-$icon-font-path: "bookstrap/";
-$icon-font-name: "glyphicons-halflings-regular";
-$icon-font-svg-id: "glyphicons_halflingsregular";
+// ** 表の基本フォントサイズ
+$table-font-size:                14px !default; // 独自に追加した変数
 
-//== Jumbotron
+//** <th>と<td>のpadding
+$table-cell-padding:            8px !default;
+//** condensedのpadding
+$table-condensed-cell-padding:  5px !default;
+
+//** 背景色
+$table-bg:                      transparent !default;
+//** ストライプの色
+$table-bg-accent:               mix($brand-primary, #FFF, 20%) !default;
+//** ホバー時の色
+$table-bg-hover:                mix($brand-primary, #FFF, 30%) !default; // 
+$table-bg-active:               $table-bg-hover !default;
+
+//** 罫線の色
+$table-border-color:            mix($brand-primary, #FFF, 100%) !default;
+
+
+//== ボタン
+//
+//## ボタンのテキストと背景や罫線の色
+
+$btn-font-weight:                bold !default;
+
+$btn-default-color:              $brand-primary !default;
+$btn-default-bg:                 #fff !default;
+$btn-default-border:             darken($brand-primary, 10%) !default;
+
+$btn-primary-color:              #fff !default;
+$btn-primary-bg:                 $brand-primary !default;
+$btn-primary-border:             darken($btn-primary-bg, 10%) !default;
+
+$btn-success-color:              #fff !default;
+$btn-success-bg:                 $brand-success !default;
+$btn-success-border:             darken($btn-success-bg, 10%) !default;
+
+$btn-info-color:                 #fff !default;
+$btn-info-bg:                    $brand-info !default;
+$btn-info-border:                darken($btn-info-bg, 10%) !default;
+
+$btn-warning-color:              #fff !default;
+$btn-warning-bg:                 $brand-warning !default;
+$btn-warning-border:             darken($btn-warning-bg, 10%) !default;
+
+$btn-danger-color:               #fff !default;
+$btn-danger-bg:                  $brand-danger !default;
+$btn-danger-border:              darken($btn-danger-bg, 10%) !default;
+
+$btn-link-disabled-color:        $gray-light !default;
+
+
+//== メディアクエリの分割ポイント
+//
+//## 
+
+// スマホ
+// Note: Deprecated $screen-xs and $screen-phone as of v3.0.1
+$screen-xs:                  480px !default;
+$screen-xs-min:              $screen-xs !default;
+$screen-phone:               $screen-xs-min !default;
+
+// タブレット
+// Note: Deprecated $screen-sm and $screen-tablet as of v3.0.1
+$screen-sm:                  768px !default;
+$screen-sm-min:              $screen-sm !default;
+$screen-tablet:              $screen-sm-min !default;
+
+// デスクトップ
+// Note: Deprecated $screen-md and $screen-desktop as of v3.0.1
+$screen-md:                  992px !default;
+$screen-md-min:              $screen-md !default;
+$screen-desktop:             $screen-md-min !default;
+
+// ワイドデスクトップ
+// Note: Deprecated $screen-lg and $screen-lg-desktop as of v3.0.1
+$screen-lg:                  1200px !default;
+$screen-lg-min:              $screen-lg !default;
+$screen-lg-desktop:          $screen-lg-min !default;
+
+// 重複避けのための最大値
+$screen-xs-max:              ($screen-sm-min - 1) !default;
+$screen-sm-max:              ($screen-md-min - 1) !default;
+$screen-md-max:              ($screen-lg-min - 1) !default;
+
+
+//== 状態と警告
+//
+//## Define colors for form feedback states and, by default, alerts.
+
+$state-success-text:             #3c763d !default;
+$state-success-bg:               #dff0d8 !default;
+$state-success-border:           darken(adjust-hue($state-success-bg, -10), 5%) !default;
+
+$state-info-text:                #31708f !default;
+$state-info-bg:                  #d9edf7 !default;
+$state-info-border:              darken(adjust-hue($state-info-bg, -10), 7%) !default;
+
+$state-warning-text:             #8a6d3b !default;
+$state-warning-bg:               #fcf8e3 !default;
+$state-warning-border:           darken(adjust-hue($state-warning-bg, -10), 5%) !default;
+
+$state-danger-text:              #a94442 !default;
+$state-danger-bg:                #f2dede !default;
+$state-danger-border:            darken(adjust-hue($state-danger-bg, -10), 5%) !default;
+
+
+//== ラベル
 //
 //##
 
-$jumbotron-padding:              $base-line-height;
-$jumbotron-color:                inherit;
-$jumbotron-bg:                   $gray-lighter;
-$jumbotron-heading-color:        inherit;
-$jumbotron-font-size:            15px;
+//** デフォルト背景
+$label-default-bg:            $gray-light !default;
+//** プライマリ背景
+$label-primary-bg:            $brand-primary !default;
+//** Success label background color
+$label-success-bg:            $brand-success !default;
+//** Info label background color
+$label-info-bg:               $brand-info !default;
+//** Warning label background color
+$label-warning-bg:            $brand-warning !default;
+//** Danger label background color
+$label-danger-bg:             $brand-danger !default;
 
-//== Tables
-$table-font-size: 13px;
+//** デフォルトラベル文字色
+$label-color:                 #fff !default;
+//** デフォルトリンク文字色
+$label-link-hover-color:      #fff !default;
 
 
-// ----- Temp (not supported in v 3.0.3.0)--------------
-
-//== Panels
+//== 注意書き Alerts
 //
-//##
+//## Define alert colors, border radius, and padding.
 
-$panel-bg:                    #fff !default;
-$panel-body-padding:          15px !default;
-$panel-border-radius:         $border-radius-base !default;
+$alert-padding:               15px !default;
+$alert-border-radius:         $border-radius-base !default;
+$alert-link-font-weight:      bold !default;
 
-//** Border color for elements within panels
-$panel-inner-border:          #ddd !default;
-$panel-footer-bg:             #f5f5f5 !default;
+$alert-success-bg:            $state-success-bg !default;
+$alert-success-text:          $state-success-text !default;
+$alert-success-border:        $state-success-border !default;
 
-$panel-default-text:          $gray-dark !default;
-$panel-default-border:        #ddd !default;
-$panel-default-heading-bg:    #f5f5f5 !default;
+$alert-info-bg:               $state-info-bg !default;
+$alert-info-text:             $state-info-text !default;
+$alert-info-border:           $state-info-border !default;
 
-$panel-primary-text:          #fff !default;
-$panel-primary-border:        $brand-primary !default;
-$panel-primary-heading-bg:    $brand-primary !default;
+$alert-warning-bg:            $state-warning-bg !default;
+$alert-warning-text:          $state-warning-text !default;
+$alert-warning-border:        $state-warning-border !default;
 
-$panel-success-text:          $state-success-text !default;
-$panel-success-border:        $state-success-border !default;
-$panel-success-heading-bg:    $state-success-bg !default;
-
-$panel-info-text:             $state-info-text !default;
-$panel-info-border:           $state-info-border !default;
-$panel-info-heading-bg:       $state-info-bg !default;
-
-$panel-warning-text:          $state-warning-text !default;
-$panel-warning-border:        $state-warning-border !default;
-$panel-warning-heading-bg:    $state-warning-bg !default;
-
-$panel-danger-text:           $state-danger-text !default;
-$panel-danger-border:         $state-danger-border !default;
-$panel-danger-heading-bg:     $state-danger-bg !default;
-
-//== Wells
-//
-//##
-
-$well-bg:                     #f5f5f5 !default;
-$well-border:                 darken($well-bg, 7%) !default;
+$alert-danger-bg:             $state-danger-bg !default;
+$alert-danger-text:           $state-danger-text !default;
+$alert-danger-border:         $state-danger-border !default;
 
 
-//== List group
+//== リストグループ
 //
 //##
 
@@ -115,14 +312,79 @@ $list-group-active-text-color:  lighten($list-group-active-bg, 40%) !default;
 $list-group-link-color:         #555 !default;
 $list-group-link-heading-color: #333 !default;
 
-//== Breadcrumbs
+
+//== パネル
+//
+//##
+
+$panel-bg:                    #fff !default;
+$panel-body-padding:          15px !default;
+$panel-border-radius:         $border-radius-base !default;
+
+//** Border color for elements within panels
+$panel-inner-border:          lighten($brand-primary, 20%) !default;
+$panel-footer-bg:             lighten($brand-primary, 25%) !default;
+
+$panel-default-text:          $gray-dark !default;
+$panel-default-border:        lighten($brand-primary, 20%) !default;
+$panel-default-heading-bg:    lighten($brand-primary, 25%) !default;
+
+$panel-primary-text:          #fff !default;
+$panel-primary-border:        $brand-primary !default;
+$panel-primary-heading-bg:    $brand-primary !default;
+
+$panel-success-text:          $state-success-text !default;
+$panel-success-border:        $state-success-border !default;
+$panel-success-heading-bg:    $state-success-bg !default;
+
+$panel-info-text:             $state-info-text !default;
+$panel-info-border:           $state-info-border !default;
+$panel-info-heading-bg:       $state-info-bg !default;
+
+$panel-warning-text:          $state-warning-text !default;
+$panel-warning-border:        $state-warning-border !default;
+$panel-warning-heading-bg:    $state-warning-bg !default;
+
+$panel-danger-text:           $state-danger-text !default;
+$panel-danger-border:         $state-danger-border !default;
+$panel-danger-heading-bg:     $state-danger-bg !default;
+
+
+//== 囲み
+//
+//##
+
+$well-bg:                     mix($brand-primary, #fff, 15%) !default;
+$well-border:                 darken($well-bg, 7%) !default;
+
+
+//== サムネイル
+//
+//##
+
+//** Padding around the thumbnail image
+$thumbnail-padding:           4px !default;
+//** Thumbnail background color
+$thumbnail-bg:                $body-bg !default;
+//** Thumbnail border color
+$thumbnail-border:            #ddd !default;
+//** Thumbnail border radius
+$thumbnail-border-radius:     $border-radius-base !default;
+
+//** Custom text color for thumbnail captions
+$thumbnail-caption-color:     $text-color !default;
+//** Padding around the thumbnail caption
+$thumbnail-caption-padding:   9px !default;
+
+
+//== パンくず
 //
 //##
 
 $breadcrumb-padding-vertical:   8px !default;
 $breadcrumb-padding-horizontal: 15px !default;
 //** Breadcrumb background color
-$breadcrumb-bg:                 #f5f5f5 !default;
+$breadcrumb-bg:                 mix($brand-primary, #fff, 10%) !default;
 //** Breadcrumb text color
 $breadcrumb-color:              #ccc !default;
 //** Text color of current page in the breadcrumb
@@ -130,9 +392,49 @@ $breadcrumb-active-color:       $gray-light !default;
 //** Textual separator for between breadcrumb elements
 $breadcrumb-separator:          "/" !default;
 
-//== Code
+
+//== コード
 //
 //##
 
-$kbd-color:                   #fff !default; //
-$kbd-bg:                      #333 !default;
+$code-color:                  darken($brand-primary, 20%) !default;
+$code-bg:                     mix($brand-primary, #fff, 20%) !default;
+
+$kbd-color:                   #fff !default;
+$kbd-bg:                      $brand-primary !default;
+
+$pre-bg:                      mix($brand-primary, #fff, 10%)  !default;
+$pre-color:                 $gray-dark !default;
+$pre-border-color:            mix($brand-primary, #fff, 50%) !default;
+$pre-scrollable-max-height:   340px !default;
+
+
+//== テキスト
+//
+//##
+
+//** Text muted color
+$text-muted:                  $gray-light !default;
+//** Abbreviations and acronyms border color
+$abbr-border-color:           $gray-light !default;
+//** 見出しのsmallの色
+$headings-small-color:        mix($brand-primary, #fff, 75%) !default;
+//** Blockquote small color
+$blockquote-small-color:      $brand-primary !default;
+//** Blockquote border color
+$blockquote-border-color:     mix($brand-primary, #FFF, 50%) !default;
+//** Page header border color
+$page-header-border-color:    $gray-lighter !default;
+
+
+//== その他
+//
+//##
+
+//** Horizontal line color.
+$hr-border:                   lighten($brand-primary, 20%) !default;
+
+//** Horizontal offset for forms and lists.
+$component-offset-horizontal: 180px !default;
+
+

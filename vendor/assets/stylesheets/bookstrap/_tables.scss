@@ -10,6 +10,7 @@ table {
 }
 th {
   text-align: left;
+  color: $brand-primary;
 }
 
 
@@ -17,6 +18,7 @@ th {
 
 .table {
   width: 100%;
+  @include margin-leader(1, $table-font-size);
   @include margin-trailer(1, $table-font-size);
   // Cells
   > thead,
@@ -55,7 +57,7 @@ th {
 
   // Nesting
   .table {
-    background-color: $body-bg;
+    //background-color: $body-bg;
   }
 }
 
@@ -69,7 +71,7 @@ th {
     > tr {
       > th,
       > td {
-        padding: em($table-condensed-cell-padding);
+        padding: em($table-condensed-cell-padding, $table-font-size);
       }
     }
   }
