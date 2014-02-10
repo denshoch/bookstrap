@@ -347,42 +347,16 @@ color: #fff;
 
 @include bg-variant('.bg-danger', $state-danger-bg);
 
+
 // Page header
 // -------------------------
 
-.dbs-page-header {
+.page-header {
+  @include margin-leader(0.5);
   @include margin-trailer(1);
-  @include padding-leader(1);
-  @include padding-trailer(1);
-  padding-left: 20px;
-  padding-right: 20px;
-    background: $brand-primary;
-    color: #fff;
-    overflow: hidden;
-    text-align: center;
-    h1, h2, h3, h4, h5, h6 {
-      color: inherit;
-      text-align: center;
-    }
-    strong {
-      color: inherit;
-    }
-    p {
-      margin-bottom: 0;
-    }
-    small {
-      display: inline-block;
-      color: #FFF;
-      font-weight: normal;
-    }
-}
-
-.dbs-page-header__deck {
-  @include adjust-font-size-to(24px);
-}
-
-.dbs-page-header__title {
-  @include narrow-heading(1.5, 0, 1);
+  border-bottom: 1px solid $page-header-border-color;
+  @include padding-trailer(0.5);
+  text-align: center;
 }
 
 

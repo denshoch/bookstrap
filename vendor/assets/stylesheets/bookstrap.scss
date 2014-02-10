@@ -9,8 +9,6 @@
 @import "bookstrap/mixins";
 @import "bootstrap/mixins";
 
-.pc { color: $brand-primary;}
-
 // Reset
 @import "bookstrap/normalize";
 @import "bookstrap/print";
@@ -46,6 +44,9 @@
 @import "bookstrap/panels";
 @import "bookstrap/wells";
 //@import "bootstrap/close";
+
+// Components Bookstrap
+@import "bookstrap/dbs-components";
 
 // Components w/ JavaScript
 //@import "bootstrap/modals";

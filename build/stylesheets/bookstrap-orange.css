@@ -1,7 +1,3 @@
-.pc {
-  color: #f39800;
-}
-
 /*! normalize.css v3.0.0 | MIT License | git.io/normalize */
 html {
   font-family: sans-serif;
@@ -368,17 +364,6 @@ hr {
   margin-bottom: 1.5em;
   border: 0;
   border-top: 1px solid #ede5d6;
-}
-
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  border: 0;
 }
 
 h1, h2, h3, h4, h5, h6,
@@ -816,46 +801,12 @@ a.bg-danger:hover {
   background-color: #e4b9b9;
 }
 
-.dbs-page-header {
+.page-header {
+  margin-top: 0.75em;
   margin-bottom: 1.5em;
-  padding-top: 1.5em;
-  padding-bottom: 1.5em;
-  padding-left: 20px;
-  padding-right: 20px;
-  background: #f39800;
-  color: #fff;
-  overflow: hidden;
+  border-bottom: 1px solid #f6e7cd;
+  padding-bottom: 0.75em;
   text-align: center;
-}
-.dbs-page-header h1, .dbs-page-header h2, .dbs-page-header h3, .dbs-page-header h4, .dbs-page-header h5, .dbs-page-header h6 {
-  color: inherit;
-  text-align: center;
-}
-.dbs-page-header strong {
-  color: inherit;
-}
-.dbs-page-header p {
-  margin-bottom: 0;
-}
-.dbs-page-header small {
-  display: inline-block;
-  color: #FFF;
-  font-weight: normal;
-}
-
-.dbs-page-header__deck {
-  font-size: 1.5em;
-  line-height: 1.5em;
-}
-
-.dbs-page-header__title {
-  font-size: 1.875em;
-  line-height: 1.2;
-  margin-top: 0em;
-  margin-bottom: 0.8em;
-}
-.dbs-page-header__title rt {
-  display: none;
 }
 
 ul,
@@ -1798,7 +1749,7 @@ a.list-group-item {
   color: #555555;
 }
 a.list-group-item .list-group-item-heading {
-  color: #333333;
+  color: #f39800;
 }
 a.list-group-item:hover, a.list-group-item:focus {
   text-decoration: none;
@@ -2212,6 +2163,154 @@ a.list-group-item-danger.active, a.list-group-item-danger.active:hover, a.list-g
   border-radius: 3px;
 }
 
+nav#toc, nav#landmarks, nav#loi, nav#lot, nav#lov, nav#page-list,
+.dbs-toc, nav.dbs-landmarks, .dbs-loi, .dbs-lot, .dbs-lov, .dbs-page-list {
+  margin-bottom: 3em;
+}
+nav#toc h1, nav#toc h2, nav#toc h3, nav#toc h4, nav#toc h5, nav#toc h6, nav#landmarks h1, nav#landmarks h2, nav#landmarks h3, nav#landmarks h4, nav#landmarks h5, nav#landmarks h6, nav#loi h1, nav#loi h2, nav#loi h3, nav#loi h4, nav#loi h5, nav#loi h6, nav#lot h1, nav#lot h2, nav#lot h3, nav#lot h4, nav#lot h5, nav#lot h6, nav#lov h1, nav#lov h2, nav#lov h3, nav#lov h4, nav#lov h5, nav#lov h6, nav#page-list h1, nav#page-list h2, nav#page-list h3, nav#page-list h4, nav#page-list h5, nav#page-list h6,
+.dbs-toc h1,
+.dbs-toc h2,
+.dbs-toc h3,
+.dbs-toc h4,
+.dbs-toc h5,
+.dbs-toc h6, nav.dbs-landmarks h1, nav.dbs-landmarks h2, nav.dbs-landmarks h3, nav.dbs-landmarks h4, nav.dbs-landmarks h5, nav.dbs-landmarks h6, .dbs-loi h1, .dbs-loi h2, .dbs-loi h3, .dbs-loi h4, .dbs-loi h5, .dbs-loi h6, .dbs-lot h1, .dbs-lot h2, .dbs-lot h3, .dbs-lot h4, .dbs-lot h5, .dbs-lot h6, .dbs-lov h1, .dbs-lov h2, .dbs-lov h3, .dbs-lov h4, .dbs-lov h5, .dbs-lov h6, .dbs-page-list h1, .dbs-page-list h2, .dbs-page-list h3, .dbs-page-list h4, .dbs-page-list h5, .dbs-page-list h6 {
+  font-size: 1.875em;
+  line-height: 1.2;
+  margin-top: 0em;
+  margin-bottom: 0.6em;
+  border-bottom-style: solid;
+  border-bottom-width: 0.0666666667em;
+  padding-bottom: 0.1333333333em;
+  border-color: #f6e7cd;
+}
+nav#toc h1 rt, nav#toc h2 rt, nav#toc h3 rt, nav#toc h4 rt, nav#toc h5 rt, nav#toc h6 rt, nav#landmarks h1 rt, nav#landmarks h2 rt, nav#landmarks h3 rt, nav#landmarks h4 rt, nav#landmarks h5 rt, nav#landmarks h6 rt, nav#loi h1 rt, nav#loi h2 rt, nav#loi h3 rt, nav#loi h4 rt, nav#loi h5 rt, nav#loi h6 rt, nav#lot h1 rt, nav#lot h2 rt, nav#lot h3 rt, nav#lot h4 rt, nav#lot h5 rt, nav#lot h6 rt, nav#lov h1 rt, nav#lov h2 rt, nav#lov h3 rt, nav#lov h4 rt, nav#lov h5 rt, nav#lov h6 rt, nav#page-list h1 rt, nav#page-list h2 rt, nav#page-list h3 rt, nav#page-list h4 rt, nav#page-list h5 rt, nav#page-list h6 rt,
+.dbs-toc h1 rt,
+.dbs-toc h2 rt,
+.dbs-toc h3 rt,
+.dbs-toc h4 rt,
+.dbs-toc h5 rt,
+.dbs-toc h6 rt, nav.dbs-landmarks h1 rt, nav.dbs-landmarks h2 rt, nav.dbs-landmarks h3 rt, nav.dbs-landmarks h4 rt, nav.dbs-landmarks h5 rt, nav.dbs-landmarks h6 rt, .dbs-loi h1 rt, .dbs-loi h2 rt, .dbs-loi h3 rt, .dbs-loi h4 rt, .dbs-loi h5 rt, .dbs-loi h6 rt, .dbs-lot h1 rt, .dbs-lot h2 rt, .dbs-lot h3 rt, .dbs-lot h4 rt, .dbs-lot h5 rt, .dbs-lot h6 rt, .dbs-lov h1 rt, .dbs-lov h2 rt, .dbs-lov h3 rt, .dbs-lov h4 rt, .dbs-lov h5 rt, .dbs-lov h6 rt, .dbs-page-list h1 rt, .dbs-page-list h2 rt, .dbs-page-list h3 rt, .dbs-page-list h4 rt, .dbs-page-list h5 rt, .dbs-page-list h6 rt {
+  display: none;
+}
+nav#toc ol, nav#landmarks ol, nav#loi ol, nav#lot ol, nav#lov ol, nav#page-list ol,
+.dbs-toc ol, nav.dbs-landmarks ol, .dbs-loi ol, .dbs-lot ol, .dbs-lov ol, .dbs-page-list ol {
+  list-style-type: none;
+  padding-left: 1em;
+}
+
+.footnotes hr,
+.dbs-footnotes hr {
+  margin-top: 3em;
+  margin-bottom: 1.5em;
+}
+.footnotes ol,
+.dbs-footnotes ol {
+  margin-left: 2em;
+}
+.footnotes li,
+.dbs-footnotes li {
+  font-size: 0.875em;
+}
+
+a.noteref,
+a.dbs-noteref {
+  display: inline-block;
+  border: none;
+  text-decoration: underline;
+  font-size: 0.75em;
+  line-height: 1;
+  vertical-align: super;
+  -epub-text-combine: horizontal;
+}
+a.noteref:before,
+a.dbs-noteref:before {
+  content: "[";
+}
+a.noteref:after,
+a.dbs-noteref:after {
+  content: "]";
+}
+
+.tcy,
+.dbs-tcy {
+  -epub-text-combine: horizontal;
+  -webkit-text-combine: horizontal;
+  -ms-text-combine-horizontal: all;
+  text-combine-horizontal: all;
+}
+
+.sideways,
+.dbs-sideways {
+  -epub-text-orientation: rotate-right;
+  -epub-text-orientation: sideways;
+  -ms-text-orientation: sideways;
+  -webkit-text-orientation: sideways;
+}
+
+.upright,
+.dbs-upright {
+  -epub-text-orientation: rotate-right;
+  -epub-text-orientation: upright;
+  -ms-text-orientation: upright;
+  -webkit-text-orientation: upright;
+  -epub-text-combine: horizontal;
+  -webkit-text-combine: horizontal;
+  -ms-text-combine-horizontal: all;
+  text-combine-horizontal: all;
+}
+
+.pagenum,
+.dbs-pagenum {
+  color: #eeeeee;
+  font-size: 0.8em;
+}
+
+.-epub-media-overlay-active {
+  background-color: yellow;
+}
+
+.dbs-page-header {
+  margin-bottom: 1.5em;
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+  padding-left: 20px;
+  padding-right: 20px;
+  background: #f39800;
+  color: #fff;
+  overflow: hidden;
+  text-align: center;
+}
+.dbs-page-header h1, .dbs-page-header h2, .dbs-page-header h3, .dbs-page-header h4, .dbs-page-header h5, .dbs-page-header h6 {
+  color: inherit;
+  text-align: center;
+}
+.dbs-page-header strong {
+  color: inherit;
+}
+.dbs-page-header p {
+  margin-bottom: 0;
+}
+.dbs-page-header small {
+  display: inline-block;
+  color: #FFF;
+  font-weight: normal;
+}
+
+.dbs-page-header__deck {
+  font-size: 1.5em;
+  line-height: 1.5em;
+}
+
+.dbs-page-header__title {
+  font-size: 1.875em;
+  line-height: 1.2;
+  margin-top: 0em;
+  margin-bottom: 0.8em;
+}
+.dbs-page-header__title rt {
+  display: none;
+}
+
 .clearfix:before, .clearfix:after {
   content: " ";
   display: table;
@@ -2257,8 +2356,4 @@ a.list-group-item-danger.active, a.list-group-item-danger.active:hover, a.list-g
 .hidden {
   display: none !important;
   visibility: hidden !important;
-}
-
-.affix {
-  position: fixed;
 }

@@ -50,7 +50,7 @@
 
 // For Affix plugin
 // -------------------------
-
-.affix {
-  position: fixed;
-}
+// # avoid position:fixed for kindlegen
+// .affix {
+//  position: fixed;
+// }

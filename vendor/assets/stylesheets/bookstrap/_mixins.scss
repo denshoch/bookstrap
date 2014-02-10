@@ -231,4 +231,50 @@
   border-radius: $border-radius;
 }
 
+// Writing-modes
+// --------
+@mixin writing-mode($writing-mode)
+{
+  @if $writing-mode == "vertical-rl" {
+    $ms-writing-mode: "tb-rl";
+  } @else {
+    $ms-writing-mode: "lr-tb";
+  }
+  -epub-writing-mode: $writing-mode;
+  -webkit-writing-mode: $writing-mode;
+  -ms-writing-mode: $ms-writing-mode;
+  writing-mode: $writing-mode;
+}
+
+// Tate-Chu-Yoko
+// --------
+@mixin tcy()
+{
+  -epub-text-combine: horizontal;
+  -webkit-text-combine: horizontal;
+  -ms-text-combine-horizontal: all;
+  text-combine-horizontal: all; // http://www.w3.org/TR/2012/WD-css3-writing-modes-20121115/
+}
+
+// Upright char
+// --------
+@mixin upright()
+{
+  -epub-text-orientation:   rotate-right;
+  -epub-text-orientation:   upright;
+  -ms-text-orientation: upright;
+  -webkit-text-orientation: upright;
+
+}
+
+// Sideways char
+// --------
+@mixin sideways()
+{
+  -epub-text-orientation: rotate-right;
+  -epub-text-orientation: sideways;
+  -ms-text-orientation: sideways;
+  -webkit-text-orientation: sideways;
+}
+
 
