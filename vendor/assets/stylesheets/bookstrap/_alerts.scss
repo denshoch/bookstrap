@@ -40,18 +40,19 @@
 // Dismissable alerts
 //
 // Expand the right padding and account for the close button's positioning.
+// dbs: kindlegen does not support relative position.
 
-.alert-dismissable {
- padding-right: ($alert-padding + 20);
-
-  // Adjust close link position
-  .close {
-    position: relative;
-    top: -2px;
-    right: -21px;
-    color: inherit;
-  }
-}
+//.alert-dismissable {
+// padding-right: ($alert-padding + 20);
+//
+//  // Adjust close link position
+//  .close {
+//    position: relative;
+//    top: -2px;
+//    right: -21px;
+//    color: inherit;
+//  }
+//}
 
 // Alternate styles
 //
