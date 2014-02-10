@@ -1312,8 +1312,8 @@ table th[class*="col-"] {
   border: 1px solid transparent;
   white-space: nowrap;
   padding: 6px 12px;
-  font-size: 16px;
-  line-height: 1.5em;
+  font-size: 1em;
+  line-height: 1.428571429;
   border-radius: 4px;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -1551,21 +1551,21 @@ table th[class*="col-"] {
 
 .btn-lg {
   padding: 10px 16px;
-  font-size: 20px;
+  font-size: 1.25em;
   line-height: 1.33;
   border-radius: 6px;
 }
 
 .btn-sm {
   padding: 5px 10px;
-  font-size: 14px;
+  font-size: 0.875em;
   line-height: 1.5;
   border-radius: 3px;
 }
 
 .btn-xs {
   padding: 1px 5px;
-  font-size: 14px;
+  font-size: 0.875em;
   line-height: 1.5;
   border-radius: 3px;
 }

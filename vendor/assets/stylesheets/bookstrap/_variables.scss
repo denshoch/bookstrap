@@ -93,6 +93,9 @@ $font-size-h4:            ceil(($font-size-base * 1.25)) !default; // ~18px 使�
 $font-size-h5:            $font-size-base !default; //使わない
 $font-size-h6:            ceil(($font-size-base * 0.85)) !default; // ~12px 使わない
 
+//** Unit-less `line-height` for use in components like buttons.
+$line-height-base:        1.428571429 !default; // 20/14
+
 // ** 見出し
 $headings-font-family:    $font-family-sans-serif !default;
 $headings-font-weight:    bold !default;
