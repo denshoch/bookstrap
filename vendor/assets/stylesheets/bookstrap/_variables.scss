@@ -33,10 +33,17 @@ $gray: lighten(#000, 33.5%) !default; // #555
 $gray-light: lighten(#000, 60%) !default;   // #999
 $gray-lighter: lighten(#000, 93.5%) !default; // #eee
 
+$desaturate-offset: 30%;
+
+// # グレーの明るさ（lightness）
+//  gray-darker: 13.5%;
+//  gray-dark: 20%;
+//  gray: 33.5%;
+//  gray-light: 60%;
+//  gray-lighter: 93.5%;
+
 $brand-primary:         #428bca !default;
-//$brand-primary: #FF6699 !default;; // pink
-//$brand-primary: darken(#FF8800, 2%) !default;; // orange
-//$brand-primary: darken(#9ACD32, 7%) !default;; // yellow green
+$brand-secondary: adjust-hue($brand-primary, 38deg);
 
 $brand-success:         #5cb85c !default; // 成功
 $brand-info:            #5bc0de !default; // 情報
@@ -143,13 +150,13 @@ $table-condensed-cell-padding:  5px !default;
 //** 背景色
 $table-bg:                      transparent !default;
 //** ストライプの色
-$table-bg-accent:               mix($brand-primary, #FFF, 20%) !default;
+$table-bg-accent:               get-related-color($brand-primary, #f9f9f9, $desaturate-offset) !default;
 //** ホバー時の色
-$table-bg-hover:                mix($brand-primary, #FFF, 30%) !default; // 
+$table-bg-hover:                get-related-color($brand-primary, #f5f5f5, $desaturate-offset) !default;
 $table-bg-active:               $table-bg-hover !default;
 
 //** 罫線の色
-$table-border-color:            mix($brand-primary, #FFF, 100%) !default;
+$table-border-color:            get-related-color($brand-primary, #ddd, $desaturate-offset) !default;
 
 
 //== ボタン
@@ -160,27 +167,27 @@ $btn-font-weight:                bold !default;
 
 $btn-default-color:              $brand-primary !default;
 $btn-default-bg:                 #fff !default;
-$btn-default-border:             darken($brand-primary, 10%) !default;
+$btn-default-border:             $brand-primary !default;
 
 $btn-primary-color:              #fff !default;
 $btn-primary-bg:                 $brand-primary !default;
-$btn-primary-border:             darken($btn-primary-bg, 10%) !default;
+$btn-primary-border:             darken($btn-primary-bg, 5%) !default;
 
 $btn-success-color:              #fff !default;
 $btn-success-bg:                 $brand-success !default;
-$btn-success-border:             darken($btn-success-bg, 10%) !default;
+$btn-success-border:             darken($btn-success-bg, 5%) !default;
 
 $btn-info-color:                 #fff !default;
 $btn-info-bg:                    $brand-info !default;
-$btn-info-border:                darken($btn-info-bg, 10%) !default;
+$btn-info-border:                darken($btn-info-bg, 5%) !default;
 
 $btn-warning-color:              #fff !default;
 $btn-warning-bg:                 $brand-warning !default;
-$btn-warning-border:             darken($btn-warning-bg, 10%) !default;
+$btn-warning-border:             darken($btn-warning-bg, 5%) !default;
 
 $btn-danger-color:               #fff !default;
 $btn-danger-bg:                  $brand-danger !default;
-$btn-danger-border:              darken($btn-danger-bg, 10%) !default;
+$btn-danger-border:              darken($btn-danger-bg, 5%) !default;
 
 $btn-link-disabled-color:        $gray-light !default;
 
@@ -295,12 +302,12 @@ $alert-danger-border:         $state-danger-border !default;
 //** Background color on `.list-group-item`
 $list-group-bg:                 #fff !default;
 //** `.list-group-item` border color
-$list-group-border:             #ddd !default;
+$list-group-border:             get-related-color($brand-primary, #ddd, $desaturate-offset) !default;
 //** List group border radius
 $list-group-border-radius:      $border-radius-base !default;
 
 //** Background color of single list elements on hover
-$list-group-hover-bg:           #f5f5f5 !default;
+$list-group-hover-bg:           get-related-color($brand-primary, #f5f5f5, $desaturate-offset) !default;
 //** Text color of active list elements
 $list-group-active-color:       $component-active-color !default;
 //** Background color of active list elements
@@ -322,12 +329,12 @@ $panel-body-padding:          15px !default;
 $panel-border-radius:         $border-radius-base !default;
 
 //** Border color for elements within panels
-$panel-inner-border:          lighten($brand-primary, 20%) !default;
-$panel-footer-bg:             lighten($brand-primary, 25%) !default;
+$panel-inner-border:          get-related-color($brand-primary, #ddd, $desaturate-offset) !default;
+$panel-footer-bg:             get-related-color($brand-primary, #f5f5f5, $desaturate-offset) !default;
 
 $panel-default-text:          $gray-dark !default;
-$panel-default-border:        lighten($brand-primary, 20%) !default;
-$panel-default-heading-bg:    lighten($brand-primary, 25%) !default;
+$panel-default-border:        get-related-color($brand-primary, #ddd, $desaturate-offset) !default;
+$panel-default-heading-bg:    get-related-color($brand-primary, #f5f5f5, $desaturate-offset) !default;
 
 $panel-primary-text:          #fff !default;
 $panel-primary-border:        $brand-primary !default;
@@ -354,7 +361,7 @@ $panel-danger-heading-bg:     $state-danger-bg !default;
 //
 //##
 
-$well-bg:                     mix($brand-primary, #fff, 15%) !default;
+$well-bg:                     get-related-color($brand-primary, #f5f5f5, $desaturate-offset) !default;
 $well-border:                 darken($well-bg, 7%) !default;
 
 
@@ -384,7 +391,7 @@ $thumbnail-caption-padding:   9px !default;
 $breadcrumb-padding-vertical:   8px !default;
 $breadcrumb-padding-horizontal: 15px !default;
 //** Breadcrumb background color
-$breadcrumb-bg:                 mix($brand-primary, #fff, 10%) !default;
+$breadcrumb-bg:                 get-related-color($brand-primary, #f5f5f5, $desaturate-offset) !default;
 //** Breadcrumb text color
 $breadcrumb-color:              #ccc !default;
 //** Text color of current page in the breadcrumb
@@ -397,15 +404,15 @@ $breadcrumb-separator:          "/" !default;
 //
 //##
 
-$code-color:                  darken($brand-primary, 20%) !default;
-$code-bg:                     mix($brand-primary, #fff, 20%) !default;
+$code-color:                  get-related-color($brand-primary, #c7254e, $desaturate-offset) !default;
+$code-bg:                     get-related-color($brand-primary, #f9f2f4, $desaturate-offset) !default;
 
 $kbd-color:                   #fff !default;
 $kbd-bg:                      $brand-primary !default;
 
-$pre-bg:                      mix($brand-primary, #fff, 10%)  !default;
-$pre-color:                 $gray-dark !default;
-$pre-border-color:            mix($brand-primary, #fff, 50%) !default;
+$pre-bg:                      get-related-color($brand-primary, #f5f5f5, $desaturate-offset) !default;
+$pre-color:                   $gray-dark !default;
+$pre-border-color:            get-related-color($brand-primary, #ccc, $desaturate-offset) !default;
 $pre-scrollable-max-height:   340px !default;
 
 
@@ -418,13 +425,15 @@ $text-muted:                  $gray-light !default;
 //** Abbreviations and acronyms border color
 $abbr-border-color:           $gray-light !default;
 //** 見出しのsmallの色
-$headings-small-color:        mix($brand-primary, #fff, 75%) !default;
+$headings-small-color:        get-related-color($brand-primary, $gray-light, $desaturate-offset) !default;
+$headings-small-color: desaturate($headings-small-color, 30%);
 //** Blockquote small color
 $blockquote-small-color:      $brand-primary !default;
 //** Blockquote border color
-$blockquote-border-color:     mix($brand-primary, #FFF, 50%) !default;
+$blockquote-border-color:     get-related-color($brand-primary, $gray-lighter, $desaturate-offset) !default;
 //** Page header border color
-$page-header-border-color:    $gray-lighter !default;
+$page-header-border-color:    get-related-color($brand-primary, $gray-lighter, $desaturate-offset) !default;
+
 
 
 //== その他
@@ -432,7 +441,8 @@ $page-header-border-color:    $gray-lighter !default;
 //##
 
 //** Horizontal line color.
-$hr-border:                   lighten($brand-primary, 20%) !default;
+$hr-border:                   get-related-color($brand-primary, $gray-lighter, $desaturate-offset) !default;
+$hr-border: desaturate($hr-border, 30%);
 
 //** Horizontal offset for forms and lists.
 $component-offset-horizontal: 180px !default;

@@ -9,6 +9,8 @@
 @import "bookstrap/mixins";
 @import "bootstrap/mixins";
 
+.pc { color: $brand-primary;}
+
 // Reset
 @import "bookstrap/normalize";
 @import "bookstrap/print";

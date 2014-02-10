@@ -19,3 +19,9 @@
 @function contained-font-size($line-height-em, $line-number: 1) {
 	@return ($base-line-height * $line-number / $line-height-em);
 }
+
+// Related color
+// -------------------------
+@function get-related-color($color, $lightness, $desaturate-offset, $darken: 5%) {
+  @return darken(desaturate(hsl(hue($color), saturation($color), lightness($lightness)), $desaturate-offset), $darken);
+}
