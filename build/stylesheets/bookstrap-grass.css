@@ -81,8 +81,6 @@ small {
 sub,
 sup {
   font-size: 75%;
-  line-height: 0;
-  position: relative;
   vertical-align: baseline;
 }
 
@@ -98,10 +96,6 @@ img {
   border: 0;
 }
 
-svg:not(:root) {
-  overflow: hidden;
-}
-
 figure {
   margin: 1em 40px;
 }
@@ -110,10 +104,6 @@ hr {
   -moz-box-sizing: content-box;
   box-sizing: content-box;
   height: 0;
-}
-
-pre {
-  overflow: auto;
 }
 
 code,
@@ -132,10 +122,6 @@ textarea {
   color: inherit;
   font: inherit;
   margin: 0;
-}
-
-button {
-  overflow: visible;
 }
 
 button,
@@ -160,10 +146,6 @@ button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
   padding: 0;
-}
-
-input {
-  line-height: normal;
 }
 
 input[type="checkbox"],
@@ -198,10 +180,6 @@ fieldset {
 legend {
   border: 0;
   padding: 0;
-}
-
-textarea {
-  overflow: auto;
 }
 
 optgroup {
@@ -259,10 +237,6 @@ th {
     page-break-inside: avoid;
   }
 
-  img {
-    max-width: 100% !important;
-  }
-
   p,
   h2,
   h3 {
@@ -306,6 +280,12 @@ th {
     border: 1px solid #ddd !important;
   }
 }
+@media print {
+  img {
+    max-width: 100% !important;
+  }
+}
+
 *,
 *:before,
 *:after {
@@ -335,7 +315,6 @@ select,
 textarea {
   font-family: inherit;
   font-size: inherit;
-  line-height: inherit;
 }
 
 a {
@@ -351,8 +330,12 @@ img {
   vertical-align: middle;
   width: auto;
   height: auto;
-  max-width: 100%;
-  max-height: 100%;
+}
+@media not amzn-kf8 {
+  img {
+    max-width: 100%;
+    max-height: 100%;
+  }
 }
 
 table {
@@ -364,6 +347,19 @@ hr {
   margin-bottom: 1.5em;
   border: 0;
   border-top: 1px solid #e3e6dd;
+}
+
+@media not amzn-kf8 {
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+  }
 }
 
 h1, h2, h3, h4, h5, h6,
@@ -435,7 +431,11 @@ h1, .h1 {
   }
 }
 h1 rt, .h1 rt {
-  display: none;
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
 }
 
 h2, .h2 {
@@ -452,7 +452,11 @@ h2, .h2 {
   }
 }
 h2 rt, .h2 rt {
-  display: none;
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
 }
 
 h3, .h3 {
@@ -469,7 +473,11 @@ h3, .h3 {
   }
 }
 h3 rt, .h3 rt {
-  display: none;
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
 }
 
 h4, .h4 {
@@ -487,7 +495,11 @@ h4, .h4 {
   }
 }
 h4 rt, .h4 rt {
-  display: none;
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
 }
 
 h5, .h5 {
@@ -505,7 +517,11 @@ h5, .h5 {
   }
 }
 h5 rt, .h5 rt {
-  display: none;
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
 }
 
 h6, .h6 {
@@ -523,7 +539,11 @@ h6, .h6 {
   }
 }
 h6 rt, .h6 rt {
-  display: none;
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
 }
 
 h1.has-ruby, .h1-has-ruby {
@@ -997,15 +1017,14 @@ pre code {
   border-radius: 0;
 }
 
-.pre-scrollable {
-  max-height: 340px;
-  overflow-y: scroll;
-}
-
 table {
-  max-width: 100%;
   background-color: transparent;
   font-size: 0.875em;
+}
+@media not amzn-kf8 {
+  table {
+    max-width: 100%;
+  }
 }
 
 th {
@@ -1555,9 +1574,11 @@ input[type="button"].btn-block {
 .label:empty {
   display: none;
 }
-.btn .label {
-  position: relative;
-  top: -1px;
+@media not amzn-kf8 {
+  .btn .label {
+    position: relative;
+    top: -1px;
+  }
 }
 
 .label-default {
@@ -2200,4 +2221,10 @@ a.dbs-noteref:after {
 .hidden {
   display: none !important;
   visibility: hidden !important;
+}
+
+@media not amzn-kf8 {
+  .affix {
+    position: fixed;
+  }
 }

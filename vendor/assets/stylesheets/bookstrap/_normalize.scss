@@ -157,8 +157,8 @@ small {
 sub,
 sup {
   font-size: 75%;
-  line-height: 0;
-  position: relative;
+  //line-height: 0;
+  // position: relative; // dbs: kindlegen does not support relative position.
   vertical-align: baseline;
 }
 
@@ -183,11 +183,11 @@ img {
 
 //
 // Correct overflow displayed oddly in IE 9.
-//
+// dbs: omitt IE sepacific
 
-svg:not(:root) {
-  overflow: hidden;
-}
+//svg:not(:root) {
+//  overflow: hidden;
+//}
 
 // Grouping content
 // ==========================================================================
@@ -212,10 +212,10 @@ hr {
 
 //
 // Contain overflow in all browsers.
-//
+// dbs: kindlegen does not support overflow
 
 pre {
-  overflow: auto;
+  //overflow: auto;
 }
 
 //
@@ -257,10 +257,10 @@ textarea {
 
 //
 // Address `overflow` set to `hidden` in IE 8/9/10.
-//
+// dbs: kindlegen does not support overflow.
 
 button {
-  overflow: visible;
+  //overflow: visible;
 }
 
 //
@@ -316,7 +316,7 @@ input::-moz-focus-inner {
 //
 
 input {
-  line-height: normal;
+  //line-height: normal;
 }
 
 //
@@ -390,10 +390,10 @@ legend {
 
 //
 // Remove default vertical scrollbar in IE 8/9.
-//
+// dbs: kindlegen does not support overflow.
 
 textarea {
-  overflow: auto;
+  //overflow: auto;
 }
 
 //

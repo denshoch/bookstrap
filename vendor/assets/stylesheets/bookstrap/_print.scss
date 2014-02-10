@@ -47,7 +47,9 @@
   }
 
   img {
-    max-width: 100% !important;
+    @media not amzn-kf8 {
+      max-width: 100% !important; // bookstrap
+    }
   }
 
   p,

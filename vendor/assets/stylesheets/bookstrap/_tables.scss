@@ -4,7 +4,9 @@
 
 
 table {
-  max-width: 100%;
+  @media not amzn-kf8 {
+    max-width: 100%; // bookstrap
+  }
   background-color: $table-bg;
   font-size: em($table-font-size);
 }
