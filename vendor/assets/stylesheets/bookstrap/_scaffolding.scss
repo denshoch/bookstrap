@@ -35,7 +35,9 @@ select,
 textarea {
   font-family: inherit;
   font-size: inherit;
-  //line-height: inherit; // dbs: kindlegen does not support line-height inherit
+  @media not amzn-kf8 {
+    line-height: inherit; // dbs: kindlegen does not support line-height inherit
+  }
 }
 
 

@@ -157,8 +157,10 @@ small {
 sub,
 sup {
   font-size: 75%;
-  //line-height: 0;
-  // position: relative; // dbs: kindlegen does not support relative position.
+  @media not amzn-kf8 {
+    line-height: 0;
+    position: relative; // dbs: kindlegen does not support relative position.
+  }
   vertical-align: baseline;
 }
 
@@ -185,9 +187,11 @@ img {
 // Correct overflow displayed oddly in IE 9.
 // dbs: omitt IE sepacific
 
-//svg:not(:root) {
-//  overflow: hidden;
-//}
+svg:not(:root) {
+  @media not amzn-kf8 {
+    overflow: hidden;
+  }
+}
 
 // Grouping content
 // ==========================================================================
@@ -212,10 +216,11 @@ hr {
 
 //
 // Contain overflow in all browsers.
-// dbs: kindlegen does not support overflow
 
 pre {
-  //overflow: auto;
+  @media not amzn-kf8 {
+    overflow: auto; // dbs: kindlegen does not support overflow
+  }
 }
 
 //
@@ -260,7 +265,9 @@ textarea {
 // dbs: kindlegen does not support overflow.
 
 button {
-  //overflow: visible;
+  @media not amzn-kf8 {
+    overflow: visible;
+  }
 }
 
 //
@@ -316,7 +323,9 @@ input::-moz-focus-inner {
 //
 
 input {
-  //line-height: normal;
+  @media not amzn-kf8 {
+    line-height: normal;
+  }
 }
 
 //
@@ -393,7 +402,9 @@ legend {
 // dbs: kindlegen does not support overflow.
 
 textarea {
-  //overflow: auto;
+  @media not amzn-kf8 {
+    overflow: auto;
+  }
 }
 
 //

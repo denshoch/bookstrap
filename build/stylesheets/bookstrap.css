@@ -83,6 +83,13 @@ sup {
   font-size: 75%;
   vertical-align: baseline;
 }
+@media not amzn-kf8 {
+  sub,
+  sup {
+    line-height: 0;
+    position: relative;
+  }
+}
 
 sup {
   top: -0.5em;
@@ -96,6 +103,12 @@ img {
   border: 0;
 }
 
+@media not amzn-kf8 {
+  svg:not(:root) {
+    overflow: hidden;
+  }
+}
+
 figure {
   margin: 1em 40px;
 }
@@ -104,6 +117,12 @@ hr {
   -moz-box-sizing: content-box;
   box-sizing: content-box;
   height: 0;
+}
+
+@media not amzn-kf8 {
+  pre {
+    overflow: auto;
+  }
 }
 
 code,
@@ -122,6 +141,12 @@ textarea {
   color: inherit;
   font: inherit;
   margin: 0;
+}
+
+@media not amzn-kf8 {
+  button {
+    overflow: visible;
+  }
 }
 
 button,
@@ -146,6 +171,12 @@ button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
   padding: 0;
+}
+
+@media not amzn-kf8 {
+  input {
+    line-height: normal;
+  }
 }
 
 input[type="checkbox"],
@@ -180,6 +211,12 @@ fieldset {
 legend {
   border: 0;
   padding: 0;
+}
+
+@media not amzn-kf8 {
+  textarea {
+    overflow: auto;
+  }
 }
 
 optgroup {
@@ -315,6 +352,14 @@ select,
 textarea {
   font-family: inherit;
   font-size: inherit;
+}
+@media not amzn-kf8 {
+  input,
+  button,
+  select,
+  textarea {
+    line-height: inherit;
+  }
 }
 
 a {
@@ -1015,6 +1060,13 @@ pre code {
   white-space: pre-wrap;
   background-color: transparent;
   border-radius: 0;
+}
+
+@media not amzn-kf8 {
+  .pre-scrollable {
+    max-height: 340px;
+    overflow-y: scroll;
+  }
 }
 
 table {
