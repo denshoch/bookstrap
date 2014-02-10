@@ -63,7 +63,10 @@ pre {
 }
 
 // Enable scrollable blocks of code
+// dbs: kindlegen does not support overflow-y.
 .pre-scrollable {
-  max-height: $pre-scrollable-max-height;
-  overflow-y: scroll;
+  @media not amzn-kf8 {
+    max-height: $pre-scrollable-max-height;
+    overflow-y: scroll;
+  }
 }

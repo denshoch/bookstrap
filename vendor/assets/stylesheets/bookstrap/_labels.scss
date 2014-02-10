@@ -31,8 +31,10 @@
 
   // Quick fix for labels in buttons
   .btn & {
-    position: relative;
-    top: -1px;
+    @media not amzn-kf8 {
+      position: relative;
+      top: -1px;
+    }
   }
 }
 

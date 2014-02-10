@@ -51,6 +51,8 @@
 // For Affix plugin
 // -------------------------
 // # avoid position:fixed for kindlegen
-// .affix {
-//  position: fixed;
-// }
+.affix {
+  @media not amzn-kf8 {
+    position: fixed;
+  }
+}

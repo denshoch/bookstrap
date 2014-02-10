@@ -277,4 +277,13 @@
   -webkit-text-orientation: sideways;
 }
 
+// Hide ruby
+// --------
+@mixin hide-ruby {
+  font: #{0/0} a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
 
