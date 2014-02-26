@@ -1,0 +1,1429 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" xml:lang="ja" lang="ja">
+    <head>
+        <meta charset="utf-8" />
+        <title>でんでんブックストラップ - デモ</title>
+        <link type="text/css" rel="stylesheet" href="http://denshoch.github.io/bookstrap/build/stylesheets/bookstrap-grass.css" />
+        <style type="text/css" media="screen">
+          body {width: 800px;margin: auto;}
+        </style>
+    </head>
+    <body>
+    <div class="dbs-page-header">
+<h1>でんでんブックストラップ <small>Bootstrap for static ebook</small></h1>
+<p>あなたのEPUB制作に</p>
+</div>
+
+<p class="lead">でんでんマークダウン + でんでんブックストラップでワンランク上の電子書籍をめざそう</p>
+
+<p>でんでんブックストラップは、ウェブ制作のフロントエンドツールとして広く使われている<a href="http://getbootstrap.com/">Bootstrap</a>を電子書籍向けにアレンジしたものです。</p>
+
+<h2>タイポグラフィー <small>Typography</small></h2>
+
+<h3>見出し <small>Headings</small></h3>
+
+<div class="panel panel-default">
+
+<div class="panel-body">
+
+<h1>h1. Bootstrap heading <small>Secondary text</small></h1>
+
+<h2>h2. Bootstrap heading <small>Secondary text</small></h2>
+
+<h3>h3. Bootstrap heading <small>Secondary text</small></h3>
+
+<h4>h4. Bootstrap heading <small>Secondary text</small></h4>
+
+<h5>h5. Bootstrap heading <small>Secondary text</small></h5>
+
+<h6>h6. Bootstrap heading <small>Secondary text</small></h6>
+
+<hr />
+
+<pre><code>&lt;h1&gt;h1. Bootstrap heading &lt;small&gt;Secondary text&lt;/small&gt;&lt;/h1&gt;
+&lt;h2&gt;h2. Bootstrap heading &lt;small&gt;Secondary text&lt;/small&gt;&lt;/h2&gt;
+&lt;h3&gt;h3. Bootstrap heading &lt;small&gt;Secondary text&lt;/small&gt;&lt;/h3&gt;
+&lt;h4&gt;h4. Bootstrap heading &lt;small&gt;Secondary text&lt;/small&gt;&lt;/h4&gt;
+&lt;h5&gt;h5. Bootstrap heading &lt;small&gt;Secondary text&lt;/small&gt;&lt;/h5&gt;
+&lt;h6&gt;h6. Bootstrap heading &lt;small&gt;Secondary text&lt;/small&gt;&lt;/h6&gt;
+</code></pre>
+
+</div>
+
+</div>
+
+<h3>本文 <small>Body copy</small></h3>
+
+<div class="panel panel-default">
+
+<div class="panel-body">
+
+<p>これは段落です。</p>
+
+<hr />
+
+<pre><code>これは段落です。
+</code></pre>
+
+</div>
+
+</div>
+
+<h3>リード文 <small>Lead body copy</small></h3>
+
+<div class="panel panel-default">
+
+<div class="panel-body">
+
+<p class="lead">ここにはMarkdownが書けます</p>
+
+<hr />
+
+<pre><code>&lt;p class="lead" markdown="1"&gt;ここにはMarkdownが書けます&lt;/p&gt;
+</code></pre>
+
+</div>
+
+</div>
+
+<h3>強調 <small>Emphasis</small></h3>
+
+<h4>小書き <small>Small text</small></h4>
+
+<div class="panel panel-default">
+
+<div class="panel-body">
+
+<p><small>This line of text is meant to be treated as fine print.</small></p>
+
+<hr />
+
+<pre><code>&lt;small&gt;This line of text is meant to be treated as fine print.&lt;/small&gt;
+</code></pre>
+
+</div>
+
+</div>
+
+<h4>重要なテキスト <small>strong</small></h4>
+
+<div class="panel panel-default">
+
+<div class="panel-body">
+
+<p>これは<strong>重要な</strong>テキストです。</p>
+
+<hr />
+
+<pre><code>これは**重要な**テキストです。
+</code></pre>
+
+</div>
+
+</div>
+
+<h4>強調されたテキスト <small>em</small></h4>
+
+<div class="panel panel-default">
+
+<div class="panel-body">
+
+<p>これは<em>強調された</em>テキストです。</p>
+
+<hr />
+
+<pre><code>これは*強調された*テキストです。
+</code></pre>
+
+</div>
+
+</div>
+
+<h4>文字の並び <small>Alignment classes</small></h4>
+
+<div class="panel panel-default">
+
+<div class="panel-body">
+
+<p class="text-left">ここにはMarkdownが書けます</p>
+
+<p class="text-center">ここにはMarkdownが書けます</p>
+
+<p class="text-right">ここにはMarkdownが書けます</p>
+
+<hr />
+
+<pre><code>&lt;p class="text-left" markdown="1"&gt;ここにはMarkdownが書けます&lt;/p&gt;
+&lt;p class="text-center" markdown="1"&gt;ここにはMarkdownが書けます&lt;/p&gt;
+&lt;p class="text-right" markdown="1"&gt;ここにはMarkdownが書けます&lt;/p&gt;
+</code></pre>
+
+</div>
+
+</div>
+
+<h3>引用 <small>Blockquotes</small></h3>
+
+<div class="panel panel-default">
+
+<div class="panel-body">
+
+<blockquote>
+
+<p>「いいですよ。その通りです。私は拡張現実を生きています。フルタイムの『ドリーマー』です」</p>
+
+<footer>藤井太洋 <cite title="Gene Mapper">『Gene Mapper』</cite></footer>
+
+</blockquote>
+
+<pre><code>&lt;blockquote markdown="1"&gt;
+「いいですよ。その通りです。私は拡張現実を生きています。フルタイムの『ドリーマー』です」
+&lt;footer&gt;藤井太洋 &lt;cite title="Gene Mapper"&gt;『Gene Mapper』&lt;/cite&gt;&lt;/footer&gt;
+&lt;/blockquote&gt;
+</code></pre>
+
+</div>
+
+</div>
+
+<div class="panel panel-default">
+
+<div class="panel-body">
+
+<blockquote class="blockquote-reverse">
+
+<p>「いいですよ。その通りです。私は拡張現実を生きています。フルタイムの『ドリーマー』です」</p>
+
+<footer>藤井太洋 <cite title="Gene Mapper">『Gene Mapper』</cite></footer>
+
+</blockquote>
+
+<hr />
+
+<pre><code>&lt;blockquote class="blockquote-reverse" markdown="1"&gt;
+「いいですよ。その通りです。私は拡張現実を生きています。フルタイムの『ドリーマー』です」
+&lt;footer&gt;藤井太洋 &lt;cite title="Gene Mapper"&gt;『Gene Mapper』&lt;/cite&gt;&lt;/footer&gt;
+&lt;/blockquote&gt;
+</code></pre>
+
+</div>
+
+</div>
+
+<h2>リスト</h2>
+
+<h3>マーカーなし <small>Unstyled</small></h3>
+
+<div class="panel panel-default">
+
+<div class="panel-body">
+
+<ul class="list-unstyled">
+<li>りんご</li>
+<li>もも</li>
+<li>みかん</li>
+</ul>
+
+<hr />
+
+<pre><code>&lt;ul class="list-unstyled"&gt;
+&lt;li&gt;りんご&lt;/li&gt;
+&lt;li&gt;もも&lt;/li&gt;
+&lt;li&gt;みかん&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+
+</div>
+
+</div>
+
+<h3>インライン表示 <small>Inline</small></h3>
+
+<div class="panel panel-default">
+
+<div class="panel-body">
+
+<ul class="list-inline">
+<li>りんご</li>
+<li>もも</li>
+<li>みかん</li>
+</ul>
+
+<hr />
+
+<pre><code>&lt;ul class="list-inline"&gt;
+&lt;li&gt;りんご&lt;/li&gt;
+&lt;li&gt;もも&lt;/li&gt;
+&lt;li&gt;みかん&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+
+</div>
+
+</div>
+
+<h3>定義リスト <small>Description</small></h3>
+
+<div class="panel panel-default">
+
+<div class="panel-body">
+
+<dl>
+<dt>Description lists</dt>
+<dd>A description list is perfect for defining terms.</dd>
+
+<dt>Euismod</dt>
+<dd>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</dd>
+</dl>
+
+<hr />
+
+<pre><code>Description lists
+:   A description list is perfect for defining terms.
+
+Euismod
+:   Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.
+</code></pre>
+
+</div>
+
+</div>
+
+<h2>コード</h2>
+
+<h3>インライン <small>code</small></h3>
+
+<div class="panel panel-default">
+
+<div class="panel-body">
+
+<p>これは<code>code</code>です</p>
+
+<hr />
+
+<pre><code>これは`code`です
+</code></pre>
+
+</div>
+
+</div>
+
+<h3>ユーザー入力 <small>kbd</small></h3>
+
+<div class="panel panel-default">
+
+<div class="panel-body">
+
+<p>これは<kbd>ユーザーによる入力</kbd>です</p>
+
+<hr />
+
+<pre><code>これは&lt;kbd&gt;ユーザーによる入力&lt;/kbd&gt;です
+</code></pre>
+
+</div>
+
+</div>
+
+<h3>ブロック <small>pre</small></h3>
+
+<div class="panel panel-default">
+
+<div class="panel-body">
+
+<pre>&lt;p&gt;Sample text here...&lt;/p&gt;</pre>
+
+<hr />
+
+<pre><code>&lt;pre&gt;&amp;lt;p&amp;gt;Sample text here...&amp;lt;/p&amp;gt;&lt;/pre&gt;
+</code></pre>
+
+</div>
+
+</div>
+
+<h2>表</h2>
+
+<h3>通常の表</h3>
+
+<div class="panel panel-default">
+
+<div class="panel-body">
+
+<table class="table">
+<thead>
+<tr>
+<th>見出しセル</th>
+<th>見出しセル</th>
+<th>見出しセル</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>セル</td>
+<td>セル</td>
+<td>セル</td>
+</tr>
+<tr>
+<td>セル</td>
+<td>セル</td>
+<td>セル</td>
+</tr>
+<tr>
+<td>セル</td>
+<td>セル</td>
+<td>セル</td>
+</tr>
+</tbody>
+</table>
+
+<hr />
+
+<pre><code>&lt;table class="table"&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;見出しセル&lt;/th&gt;
+&lt;th&gt;見出しセル&lt;/th&gt;
+&lt;th&gt;見出しセル&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;セル&lt;/td&gt;
+&lt;td&gt;セル&lt;/td&gt;
+&lt;td&gt;セル&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;セル&lt;/td&gt;
+&lt;td&gt;セル&lt;/td&gt;
+&lt;td&gt;セル&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;セル&lt;/td&gt;
+&lt;td&gt;セル&lt;/td&gt;
+&lt;td&gt;セル&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+</code></pre>
+
+</div>
+
+</div>
+
+<h3>ストライプ</h3>
+
+<div class="panel panel-default">
+
+<div class="panel-body">
+
+<table class="table table-striped">
+<thead>
+<tr>
+<th>見出しセル</th>
+<th>見出しセル</th>
+<th>見出しセル</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>セル</td>
+<td>セル</td>
+<td>セル</td>
+</tr>
+<tr>
+<td>セル</td>
+<td>セル</td>
+<td>セル</td>
+</tr>
+<tr>
+<td>セル</td>
+<td>セル</td>
+<td>セル</td>
+</tr>
+</tbody>
+</table>
+
+<hr />
+
+<pre><code>&lt;table class="table table-striped"&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;見出しセル&lt;/th&gt;
+&lt;th&gt;見出しセル&lt;/th&gt;
+&lt;th&gt;見出しセル&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;セル&lt;/td&gt;
+&lt;td&gt;セル&lt;/td&gt;
+&lt;td&gt;セル&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;セル&lt;/td&gt;
+&lt;td&gt;セル&lt;/td&gt;
+&lt;td&gt;セル&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;セル&lt;/td&gt;
+&lt;td&gt;セル&lt;/td&gt;
+&lt;td&gt;セル&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+</code></pre>
+
+</div>
+
+</div>
+
+<h3>枠あり</h3>
+
+<div class="panel panel-default">
+
+<div class="panel-body">
+
+<table class="table table-bordered">
+<thead>
+<tr>
+<th>見出しセル</th>
+<th>見出しセル</th>
+<th>見出しセル</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>セル</td>
+<td>セル</td>
+<td>セル</td>
+</tr>
+<tr>
+<td>セル</td>
+<td>セル</td>
+<td>セル</td>
+</tr>
+<tr>
+<td>セル</td>
+<td>セル</td>
+<td>セル</td>
+</tr>
+</tbody>
+</table>
+
+<hr />
+
+<pre><code>&lt;table class="table table-bordered"&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;見出しセル&lt;/th&gt;
+&lt;th&gt;見出しセル&lt;/th&gt;
+&lt;th&gt;見出しセル&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;セル&lt;/td&gt;
+&lt;td&gt;セル&lt;/td&gt;
+&lt;td&gt;セル&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;セル&lt;/td&gt;
+&lt;td&gt;セル&lt;/td&gt;
+&lt;td&gt;セル&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;セル&lt;/td&gt;
+&lt;td&gt;セル&lt;/td&gt;
+&lt;td&gt;セル&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+</code></pre>
+
+</div>
+
+</div>
+
+<h3>ホバー</h3>
+
+<div class="panel panel-default">
+
+<div class="panel-body">
+
+<table class="table table-hover">
+<thead>
+<tr>
+<th>見出しセル</th>
+<th>見出しセル</th>
+<th>見出しセル</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>セル</td>
+<td>セル</td>
+<td>セル</td>
+</tr>
+<tr>
+<td>セル</td>
+<td>セル</td>
+<td>セル</td>
+</tr>
+<tr>
+<td>セル</td>
+<td>セル</td>
+<td>セル</td>
+</tr>
+</tbody>
+</table>
+
+<hr />
+
+<pre><code>&lt;table class="table table-hover"&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;見出しセル&lt;/th&gt;
+&lt;th&gt;見出しセル&lt;/th&gt;
+&lt;th&gt;見出しセル&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;セル&lt;/td&gt;
+&lt;td&gt;セル&lt;/td&gt;
+&lt;td&gt;セル&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;セル&lt;/td&gt;
+&lt;td&gt;セル&lt;/td&gt;
+&lt;td&gt;セル&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;セル&lt;/td&gt;
+&lt;td&gt;セル&lt;/td&gt;
+&lt;td&gt;セル&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+</code></pre>
+
+</div>
+
+</div>
+
+<h3>狭め</h3>
+
+<div class="panel panel-default">
+
+<div class="panel-body">
+
+<table class="table table-condensed">
+<thead>
+<tr>
+<th>見出しセル</th>
+<th>見出しセル</th>
+<th>見出しセル</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>セル</td>
+<td>セル</td>
+<td>セル</td>
+</tr>
+<tr>
+<td>セル</td>
+<td>セル</td>
+<td>セル</td>
+</tr>
+<tr>
+<td>セル</td>
+<td>セル</td>
+<td>セル</td>
+</tr>
+</tbody>
+</table>
+
+<hr />
+
+<pre><code>&lt;table class="table table-condensed"&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;見出しセル&lt;/th&gt;
+&lt;th&gt;見出しセル&lt;/th&gt;
+&lt;th&gt;見出しセル&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;セル&lt;/td&gt;
+&lt;td&gt;セル&lt;/td&gt;
+&lt;td&gt;セル&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;セル&lt;/td&gt;
+&lt;td&gt;セル&lt;/td&gt;
+&lt;td&gt;セル&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;セル&lt;/td&gt;
+&lt;td&gt;セル&lt;/td&gt;
+&lt;td&gt;セル&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+</code></pre>
+
+</div>
+
+</div>
+
+<h3>色付き</h3>
+
+<div class="panel panel-default">
+
+<div class="panel-body">
+
+<table class="table">
+<thead>
+<tr>
+<th>見出しセル</th>
+<th>見出しセル</th>
+<th>見出しセル</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>セル</td>
+<td>セル</td>
+<td>セル</td>
+</tr>
+<tr class="active">
+<td>セル</td>
+<td>セル</td>
+<td>セル</td>
+</tr>
+<tr>
+<td>セル</td>
+<td>セル</td>
+<td>セル</td>
+</tr>
+<tr class="success">
+<td>セル</td>
+<td>セル</td>
+<td>セル</td>
+</tr>
+<tr>
+<td>セル</td>
+<td>セル</td>
+<td>セル</td>
+</tr>
+<tr class="info">
+<td>セル</td>
+<td>セル</td>
+<td>セル</td>
+</tr>
+<tr>
+<td>セル</td>
+<td>セル</td>
+<td>セル</td>
+</tr>
+<tr class="warning">
+<td>セル</td>
+<td>セル</td>
+<td>セル</td>
+</tr>
+<tr>
+<td>セル</td>
+<td>セル</td>
+<td>セル</td>
+</tr>
+<tr class="danger">
+<td>セル</td>
+<td>セル</td>
+<td>セル</td>
+</tr>
+</tbody>
+</table>
+
+<hr />
+
+<pre><code>&lt;table class="table"&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;見出しセル&lt;/th&gt;
+&lt;th&gt;見出しセル&lt;/th&gt;
+&lt;th&gt;見出しセル&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;セル&lt;/td&gt;
+&lt;td&gt;セル&lt;/td&gt;
+&lt;td&gt;セル&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class="active"&gt;
+&lt;td&gt;セル&lt;/td&gt;
+&lt;td&gt;セル&lt;/td&gt;
+&lt;td&gt;セル&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;セル&lt;/td&gt;
+&lt;td&gt;セル&lt;/td&gt;
+&lt;td&gt;セル&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class="success"&gt;
+&lt;td&gt;セル&lt;/td&gt;
+&lt;td&gt;セル&lt;/td&gt;
+&lt;td&gt;セル&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;セル&lt;/td&gt;
+&lt;td&gt;セル&lt;/td&gt;
+&lt;td&gt;セル&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class="info"&gt;
+&lt;td&gt;セル&lt;/td&gt;
+&lt;td&gt;セル&lt;/td&gt;
+&lt;td&gt;セル&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;セル&lt;/td&gt;
+&lt;td&gt;セル&lt;/td&gt;
+&lt;td&gt;セル&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class="warning"&gt;
+&lt;td&gt;セル&lt;/td&gt;
+&lt;td&gt;セル&lt;/td&gt;
+&lt;td&gt;セル&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;セル&lt;/td&gt;
+&lt;td&gt;セル&lt;/td&gt;
+&lt;td&gt;セル&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class="danger"&gt;
+&lt;td&gt;セル&lt;/td&gt;
+&lt;td&gt;セル&lt;/td&gt;
+&lt;td&gt;セル&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+</code></pre>
+
+</div>
+
+</div>
+
+<h2>ボタン</h2>
+
+<h3>オプション</h3>
+
+<div class="panel panel-default">
+
+<div class="panel-body">
+
+<h2><button type="button" class="btn btn-default">Default</button> <button type="button" class="btn btn-primary">Primary</button> <button type="button" class="btn btn-success">Success</button> <button type="button" class="btn btn-info">Info</button> <button type="button" class="btn btn-warning">Warning</button> <button type="button" class="btn btn-danger">Danger</button> <button type="button" class="btn btn-link">Link</button></h2>
+
+<pre><code>&lt;button type="button" class="btn btn-default"&gt;Default&lt;/button&gt;
+&lt;button type="button" class="btn btn-primary"&gt;Primary&lt;/button&gt;
+&lt;button type="button" class="btn btn-success"&gt;Success&lt;/button&gt;
+&lt;button type="button" class="btn btn-info"&gt;Info&lt;/button&gt;
+&lt;button type="button" class="btn btn-warning"&gt;Warning&lt;/button&gt;
+&lt;button type="button" class="btn btn-danger"&gt;Danger&lt;/button&gt;
+&lt;button type="button" class="btn btn-link"&gt;Link&lt;/button&gt;
+</code></pre>
+
+</div>
+
+</div>
+
+<h3>サイズ</h3>
+
+<div class="panel panel-default">
+
+<div class="panel-body">
+
+<p>
+  <button type="button" class="btn btn-primary btn-lg">Large button</button>
+  <button type="button" class="btn btn-default btn-lg">Large button</button>
+</p>
+
+<p>
+  <button type="button" class="btn btn-primary">Default button</button>
+  <button type="button" class="btn btn-default">Default button</button>
+</p>
+
+<p>
+  <button type="button" class="btn btn-primary btn-sm">Small button</button>
+  <button type="button" class="btn btn-default btn-sm">Small button</button>
+</p>
+
+<p>
+  <button type="button" class="btn btn-primary btn-xs">Extra small button</button>
+  <button type="button" class="btn btn-default btn-xs">Extra small button</button>
+</p>
+
+<hr />
+
+<pre><code>&lt;p&gt;
+  &lt;button type="button" class="btn btn-primary btn-lg"&gt;Large button&lt;/button&gt;
+  &lt;button type="button" class="btn btn-default btn-lg"&gt;Large button&lt;/button&gt;
+&lt;/p&gt;
+&lt;p&gt;
+  &lt;button type="button" class="btn btn-primary"&gt;Default button&lt;/button&gt;
+  &lt;button type="button" class="btn btn-default"&gt;Default button&lt;/button&gt;
+&lt;/p&gt;
+&lt;p&gt;
+  &lt;button type="button" class="btn btn-primary btn-sm"&gt;Small button&lt;/button&gt;
+  &lt;button type="button" class="btn btn-default btn-sm"&gt;Small button&lt;/button&gt;
+&lt;/p&gt;
+&lt;p&gt;
+  &lt;button type="button" class="btn btn-primary btn-xs"&gt;Extra small button&lt;/button&gt;
+  &lt;button type="button" class="btn btn-default btn-xs"&gt;Extra small button&lt;/button&gt;
+&lt;/p&gt;
+</code></pre>
+
+</div>
+
+</div>
+
+<div class="panel panel-default">
+
+<div class="panel-body">
+
+<p><button type="button" class="btn btn-primary btn-lg btn-block">Block level button</button></p>
+
+<h2><button type="button" class="btn btn-default btn-lg btn-block">Block level button</button></h2>
+
+<pre><code>&lt;button type="button" class="btn btn-primary btn-lg btn-block"&gt;Block level button&lt;/button&gt;
+&lt;button type="button" class="btn btn-default btn-lg btn-block"&gt;Block level button&lt;/button&gt;
+</code></pre>
+
+</div>
+
+</div>
+
+<h2>ヘルパークラス</h2>
+
+<h3>色付きテキスト</h3>
+
+<div class="panel panel-default">
+
+<div class="panel-body">
+
+<p class="text-muted">Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.</p>
+
+<p class="text-primary">Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+
+<p class="text-success">Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
+
+<p class="text-info">Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+
+<p class="text-warning">Etiam porta sem malesuada magna mollis euismod.</p>
+
+<p class="text-danger">Donec ullamcorper nulla non metus auctor fringilla.</p>
+
+<hr />
+
+<pre><code>&lt;p class="text-muted"&gt;Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.&lt;/p&gt;
+&lt;p class="text-primary"&gt;Nullam id dolor id nibh ultricies vehicula ut id elit.&lt;/p&gt;
+&lt;p class="text-success"&gt;Duis mollis, est non commodo luctus, nisi erat porttitor ligula.&lt;/p&gt;
+&lt;p class="text-info"&gt;Maecenas sed diam eget risus varius blandit sit amet non magna.&lt;/p&gt;
+&lt;p class="text-warning"&gt;Etiam porta sem malesuada magna mollis euismod.&lt;/p&gt;
+&lt;p class="text-danger"&gt;Donec ullamcorper nulla non metus auctor fringilla.&lt;/p&gt;
+</code></pre>
+
+</div>
+
+</div>
+
+<h3>背景色</h3>
+
+<p><strong>必要に応じて<code>padding</code>などを加えること</strong></p>
+
+<div class="panel panel-default">
+
+<div class="panel-body">
+
+<p class="bg-primary">Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+
+<p class="bg-success">Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
+
+<p class="bg-info">Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+
+<p class="bg-warning">Etiam porta sem malesuada magna mollis euismod.</p>
+
+<p class="bg-danger">Donec ullamcorper nulla non metus auctor fringilla.</p>
+
+<hr />
+
+<pre><code>&lt;p class="bg-primary"&gt;Nullam id dolor id nibh ultricies vehicula ut id elit.&lt;/p&gt;
+&lt;p class="bg-success"&gt;Duis mollis, est non commodo luctus, nisi erat porttitor ligula.&lt;/p&gt;
+&lt;p class="bg-info"&gt;Maecenas sed diam eget risus varius blandit sit amet non magna.&lt;/p&gt;
+&lt;p class="bg-warning"&gt;Etiam porta sem malesuada magna mollis euismod.&lt;/p&gt;
+&lt;p class="bg-danger"&gt;Donec ullamcorper nulla non metus auctor fringilla.&lt;/p&gt;
+</code></pre>
+
+</div>
+
+</div>
+
+<h1>コンポーネント</h1>
+
+<h2>パンくずリスト <small>Breadcrumbs</small></h2>
+
+<div class="panel panel-default">
+
+<div class="panel-body">
+
+<ol class="breadcrumb">
+  <li><a href="#">Home</a></li>
+  <li><a href="#">Library</a></li>
+  <li class="active">Data</li>
+</ol>
+
+<hr />
+
+<pre><code>&lt;ol class="breadcrumb"&gt;
+  &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;Library&lt;/a&gt;&lt;/li&gt;
+  &lt;li class="active"&gt;Data&lt;/li&gt;
+&lt;/ol&gt;
+</code></pre>
+
+</div>
+
+</div>
+
+<h2>ラベル <small>Labels</small></h2>
+
+<div class="panel panel-default">
+
+<div class="panel-body">
+
+<div>
+<span class="label label-default">Default</span>
+<span class="label label-primary">Primary</span>
+<span class="label label-success">Success</span>
+<span class="label label-info">Info</span>
+<span class="label label-warning">Warning</span>
+<span class="label label-danger">Danger</span>
+</div>
+
+<hr />
+
+<pre><code>&lt;span class="label label-default"&gt;Default&lt;/span&gt;
+&lt;span class="label label-primary"&gt;Primary&lt;/span&gt;
+&lt;span class="label label-success"&gt;Success&lt;/span&gt;
+&lt;span class="label label-info"&gt;Info&lt;/span&gt;
+&lt;span class="label label-warning"&gt;Warning&lt;/span&gt;
+&lt;span class="label label-danger"&gt;Danger&lt;/span&gt;
+</code></pre>
+
+</div>
+
+</div>
+
+<h2>ページヘッダー <small>Page header</small></h2>
+
+<div class="panel panel-default">
+
+<div class="panel-body">
+
+<div class="page-header">
+<h1>Example page header <small>Subtext for header</small></h1>
+</div>
+
+<hr />
+
+<pre><code>&lt;div class="page-header"&gt;
+&lt;h1&gt;Example page header &lt;small&gt;Subtext for header&lt;/small&gt;&lt;/h1&gt;
+&lt;/div&gt;
+</code></pre>
+
+</div>
+
+</div>
+
+<h2>注意書き <small>Alerts</small></h2>
+
+<div class="panel panel-default">
+
+<div class="panel-body">
+
+<div class="alert alert-success">
+<strong>Well done!</strong> You successfully read this important alert message.
+</div>
+
+<div class="alert alert-info">
+<strong>Heads up!</strong> This alert needs your attention, but it's not super important.
+</div>
+
+<div class="alert alert-warning">
+<strong>Warning!</strong> Better check yourself, you're not looking too good.
+</div>
+
+<div class="alert alert-danger">
+<strong>Oh snap!</strong> Change a few things up and try submitting again.
+</div>
+
+<hr />
+
+<pre><code>&lt;div class="alert alert-success"&gt;
+  &lt;strong&gt;Well done!&lt;/strong&gt; You successfully read this important alert message.
+&lt;/div&gt;
+&lt;div class="alert alert-info"&gt;
+  &lt;strong&gt;Heads up!&lt;/strong&gt; This alert needs your attention, but it's not super important.
+&lt;/div&gt;
+&lt;div class="alert alert-warning"&gt;
+  &lt;strong&gt;Warning!&lt;/strong&gt; Better check yourself, you're not looking too good.
+&lt;/div&gt;
+&lt;div class="alert alert-danger"&gt;
+  &lt;strong&gt;Oh snap!&lt;/strong&gt; Change a few things up and try submitting again.
+&lt;/div&gt;
+</code></pre>
+
+</div>
+
+</div>
+
+<h2>リストグループ <small>List group</small></h2>
+
+<h3>基本形</h3>
+
+<div class="panel panel-default">
+
+<div class="panel-body">
+
+<ul class="list-group">
+<li class="list-group-item">アイテム</li>
+<li class="list-group-item">アイテム</li>
+<li class="list-group-item">アイテム</li>
+</ul>
+
+<hr />
+
+<pre><code>&lt;ul class="list-group"&gt;
+&lt;li class="list-group-item"&gt;アイテム&lt;/li&gt;
+&lt;li class="list-group-item"&gt;アイテム&lt;/li&gt;
+&lt;li class="list-group-item"&gt;アイテム&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+
+</div>
+
+</div>
+
+<div class="panel panel-default">
+
+<div class="panel-body">
+
+<div class="list-group">
+<a href="#" class="list-group-item">アイテム</a>
+<a href="#" class="list-group-item">アイテム</a>
+<a href="#" class="list-group-item">アイテム</a>
+</div>
+
+<hr />
+
+<pre><code>&lt;div class="list-group"&gt;
+&lt;a href="#" class="list-group-item"&gt;アイテム&lt;/a&gt;
+&lt;a href="#" class="list-group-item"&gt;アイテム&lt;/a&gt;
+&lt;a href="#" class="list-group-item"&gt;アイテム&lt;/a&gt;
+&lt;/div&gt;
+</code></pre>
+
+</div>
+
+</div>
+
+<div class="panel panel-default">
+
+<div class="panel-body">
+
+<div class="list-group">
+<a href="#" class="list-group-item">
+<h4 class="list-group-item-heading">見出し</h4>
+<p class="list-group-item-text">テキスト</p>
+</a>
+<a href="#" class="list-group-item">
+<h4 class="list-group-item-heading">見出し</h4>
+<p class="list-group-item-text">テキスト</p>
+</a>
+<a href="#" class="list-group-item">
+<h4 class="list-group-item-heading">見出し</h4>
+<p class="list-group-item-text">テキスト</p>
+</a>
+</div>
+
+<hr />
+
+<pre><code>&lt;div class="list-group"&gt;
+&lt;a href="#" class="list-group-item"&gt;
+&lt;h4 class="list-group-item-heading"&gt;見出し&lt;/h4&gt;
+&lt;p class="list-group-item-text"&gt;テキスト&lt;/p&gt;
+&lt;/a&gt;
+&lt;a href="#" class="list-group-item"&gt;
+&lt;h4 class="list-group-item-heading"&gt;見出し&lt;/h4&gt;
+&lt;p class="list-group-item-text"&gt;テキスト&lt;/p&gt;
+&lt;/a&gt;
+&lt;a href="#" class="list-group-item"&gt;
+&lt;h4 class="list-group-item-heading"&gt;見出し&lt;/h4&gt;
+&lt;p class="list-group-item-text"&gt;テキスト&lt;/p&gt;
+&lt;/a&gt;
+&lt;/div&gt;
+</code></pre>
+
+</div>
+
+</div>
+
+<h2>パネル <small>Panels</small></h2>
+
+<h3>基本形</h3>
+
+<div class="panel panel-default">
+
+<div class="panel-body">
+
+<div class="panel panel-default">
+<div class="panel-body">
+Basic panel example
+</div>
+</div>
+
+<hr />
+
+<pre><code>&lt;div class="panel panel-default"&gt;
+&lt;div class="panel-body"&gt;
+Basic panel example
+&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+</div>
+
+</div>
+
+<h3>ヘッダあり</h3>
+
+<div class="panel panel-default">
+
+<div class="panel-body">
+
+<div class="panel panel-default">
+<div class="panel-heading">Panel heading without title</div>
+<div class="panel-body">
+Panel content
+</div>
+</div>
+
+<div class="panel panel-default">
+<div class="panel-heading">
+<h3 class="panel-title">Panel title</h3>
+</div>
+<div class="panel-body">
+Panel content
+</div>
+</div>
+
+<hr />
+
+<pre><code>&lt;div class="panel panel-default"&gt;
+&lt;div class="panel-heading"&gt;Panel heading without title&lt;/div&gt;
+&lt;div class="panel-body"&gt;
+Panel content
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="panel panel-default"&gt;
+&lt;div class="panel-heading"&gt;
+&lt;h3 class="panel-title"&gt;Panel title&lt;/h3&gt;
+&lt;/div&gt;
+&lt;div class="panel-body"&gt;
+Panel content
+&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+</div>
+
+</div>
+
+<h3>フッタあり</h3>
+
+<div class="panel panel-default">
+
+<div class="panel-body">
+
+<div class="panel panel-default">
+<div class="panel-body">
+Panel content
+</div>
+<div class="panel-footer">Panel footer</div>
+</div>
+
+<hr />
+
+<pre><code>&lt;div class="panel panel-default"&gt;
+&lt;div class="panel-body"&gt;
+Panel content
+&lt;/div&gt;
+&lt;div class="panel-footer"&gt;Panel footer&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+</div>
+
+</div>
+
+<h3>色付き</h3>
+
+<div class="panel panel-default">
+
+<div class="panel-body">
+
+<div class="panel panel-primary">
+<div class="panel-heading">
+<h3 class="panel-title">Panel title</h3>
+</div>
+<div class="panel-body">
+Panel content
+</div>
+</div>
+
+<div class="panel panel-success">
+<div class="panel-heading">
+<h3 class="panel-title">Panel title</h3>
+</div>
+<div class="panel-body">
+Panel content
+</div>
+</div>
+
+<div class="panel panel-info">
+<div class="panel-heading">
+<h3 class="panel-title">Panel title</h3>
+</div>
+<div class="panel-body">
+Panel content
+</div>
+</div>
+
+<div class="panel panel-warning">
+<div class="panel-heading">
+<h3 class="panel-title">Panel title</h3>
+</div>
+<div class="panel-body">
+Panel content
+</div>
+</div>
+
+<div class="panel panel-danger">
+<div class="panel-heading">
+<h3 class="panel-title">Panel title</h3>
+</div>
+<div class="panel-body">
+Panel content
+</div>
+</div>
+
+<hr />
+
+<pre><code>&lt;div class="panel panel-primary"&gt;
+&lt;div class="panel-heading"&gt;
+&lt;h3 class="panel-title"&gt;Panel title&lt;/h3&gt;
+&lt;/div&gt;
+&lt;div class="panel-body"&gt;
+Panel content
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="panel panel-success"&gt;
+&lt;div class="panel-heading"&gt;
+&lt;h3 class="panel-title"&gt;Panel title&lt;/h3&gt;
+&lt;/div&gt;
+&lt;div class="panel-body"&gt;
+Panel content
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="panel panel-info"&gt;
+&lt;div class="panel-heading"&gt;
+&lt;h3 class="panel-title"&gt;Panel title&lt;/h3&gt;
+&lt;/div&gt;
+&lt;div class="panel-body"&gt;
+Panel content
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="panel panel-warning"&gt;
+&lt;div class="panel-heading"&gt;
+&lt;h3 class="panel-title"&gt;Panel title&lt;/h3&gt;
+&lt;/div&gt;
+&lt;div class="panel-body"&gt;
+Panel content
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="panel panel-danger"&gt;
+&lt;div class="panel-heading"&gt;
+&lt;h3 class="panel-title"&gt;Panel title&lt;/h3&gt;
+&lt;/div&gt;
+&lt;div class="panel-body"&gt;
+Panel content
+&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+</div>
+
+</div>
+
+<h2>囲み <small>Wells</small></h2>
+
+<h3>基本形</h3>
+
+<div class="panel panel-default">
+
+<div class="panel-body">
+
+<div class="well">Look, I'm in a well!</div>
+
+<hr />
+
+<pre><code>&lt;div class="well"&gt;Look, I'm in a well!&lt;/div&gt;
+</code></pre>
+
+</div>
+
+</div>
+
+<h3>サイズ</h3>
+
+<div class="panel panel-default">
+
+<div class="panel-body">
+
+<div class="well well-lg">Look, I'm in a large well!!</div>
+
+<div class="well well-sm">Look, I'm in a small well!</div>
+
+<hr />
+
+<pre><code>&lt;div class="well well-lg"&gt;Look, I'm in a large well!!&lt;/div&gt;
+
+&lt;div class="well well-sm"&gt;Look, I'm in a small well!&lt;/div&gt;
+</code></pre>
+
+</div>
+
+</div>
+
+    </body>
+</html>
+    
